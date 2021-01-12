@@ -37,4 +37,7 @@ export function game(arr) {
       return num;
     })
     .join(",");
+  // .join(',')
 }
+console.log("아니 잔디 왜 안채워져");
+// console.log('아니 잔디 왜 안채워져')
