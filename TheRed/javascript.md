@@ -132,6 +132,7 @@ say();
 
 - JS의 이상한 동작은 독특한 형변환도 원인
 - 일치 연산자 === 사용 습관화
+- === 는 타입의 형태까지 확인 하기 때문에 반드시 사용해줘야 한다.
 - 명시적 형변환 활용
 
 --
@@ -153,4 +154,27 @@ function 함수() {
 // 또는 이렇게 ESM 모듈 형태로 불러오면
 // app.js에는 "자동으로" 엄격한 모드 적용
 <script> type="module" src="app.js"</script>
+```
+
+## 비동기 자바스크립트 (Asynchronous JavaScript)
+
+1. 비동기 처리는 필연
+
+- 기능 대부분을 외부 API에 의존하고 있기 떄문
+- 외부 API를 호출하고 결과를 '콜백'으로 전달받기 때문
+- 생각보다 자바스크립트 언어가 차지하는 비율은 작고 외부의 API, DOM을 호출해서 다룬다
+
+```
+document.addEventListener('DOMContentLoaded', () => {
+  // 5초 후에 콘솔에 '안녕하세요' 출력
+  setTimeout(()=> {
+    console.log('안녕하세요');
+  },5000);
+
+  // 사용자가 #button을 클릭할 때 콘솔에 '클릭' 출력
+  const button = document.querySelector('button');
+  button.addEventListener('click', () =>{
+    console.log('클릭');
+  },false)
+},false)
 ```
