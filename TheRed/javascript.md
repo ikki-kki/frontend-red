@@ -247,4 +247,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 3. 다중 Promise를 다루기
 
--
+- MDN Promise에서 확인가능
+- Promise.all() : 모두 다 성공했을 시
+- Promise.allSettled() : 실패, 성공 상관 없지만 모두의 상태가 결정 날 시
+- Promise.race() : 어떤 상태로든 결정이 하나 날 시
+- Promise.any() : 뭐라도 성공하면 성공한 값을 반환
+
+## 마무리 요약 정리\
+
+1. HTML에는 의미를 담아서 작성하자.
+2. HTML만으로도 의외로 많은 것을 할 수 있다.
+3. 완벽하게 다 배우는건 비효율적이다. 우선순위를 정해서 학습하자
+4. CSS 분야에서는 레이아웃과 특정성이 자주 필요해진다.
+5. JS는 ES6+ 스트릭트 모드를 기본으로 두자.
+6. 클로져, 어휘적 범위 등은 JS 엔진 동작을 통해 이해하자.
+7. 콜백 지옥은 async/await 혹은 Promise로 해결한다.
